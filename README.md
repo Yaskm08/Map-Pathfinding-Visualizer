@@ -1,11 +1,31 @@
-# Sanity Blogging Content Studio
+<h1>Map Pathfinding Visualizer</h1>
+<p>Pathfinding algorithms visualized on a real map. Anywhere in the world.</p>
 
-Congratulations, you have now installed the Sanity Content Studio, an open-source real-time content editing environment connected to the Sanity backend.
+<p align="center">
+  <img alt="GitHub" src="https://img.shields.io/github/license/honzaap/Pathfinding"/>
+  <img alt="GitHub" src="https://img.shields.io/github/stars/honzaap/Pathfinding"/>
+</p>
 
-Now you can do the following things:
+<h2 align="center">
+    <a href="https://honzaap.github.io/Pathfinding">
+        <b>Try it out!</b>
+    </a>
+</h2>
 
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- Check out the example frontend: [React/Next.js](https://github.com/sanity-io/tutorial-sanity-blog-react-next)
-- [Read the blog post about this template](https://www.sanity.io/blog/build-your-own-blog-with-sanity-and-next-js?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+
+
+https://github.com/honzaap/Pathfinding/assets/58147774/1a5e5c50-5e13-4738-b67a-2015631906ee
+
+
+
+## Installation
+1. Clone repository to your local machine
+2. Open terminal and `cd` into repository folder
+3. Run `npm install`
+4. Run `vite` or `npm run dev`
+
+## Available algorithms 
+- A* algorithm
+- Greedy algorithm
+- Dijkstra's algorithm
+- Bidirectional Search algorithm

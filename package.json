@@ -1,37 +1,40 @@
 {
-  "name": "yassine-kraiem",
+  "name": "pathfinding",
   "private": true,
-  "version": "1.0.0",
-  "main": "package.json",
-  "license": "UNLICENSED",
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "sanity dev",
-    "start": "sanity start",
-    "build": "sanity build",
-    "deploy": "sanity deploy",
-    "deploy-graphql": "sanity graphql deploy"
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint Pathfinding --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
-  "keywords": [
-    "sanity"
-  ],
   "dependencies": {
-    "@sanity/vision": "^3.49.0",
+    "@deck.gl/carto": "^8.9.31",
+    "@deck.gl/core": "^8.9.31",
+    "@deck.gl/geo-layers": "^8.9.31",
+    "@deck.gl/layers": "^8.9.31",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.14",
+    "@mui/material": "^5.14.14",
+    "deck.gl": "^8.9.31",
+    "maplibre-gl": "^3.5.0",
+    "mui-color-input": "^2.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sanity": "^3.49.0",
-    "styled-components": "^6.1.8"
+    "react-map-gl": "^7.1.6",
+    "sass": "^1.69.3"
   },
   "devDependencies": {
-    "@sanity/eslint-config-studio": "^4.0.0",
-    "@types/react": "^18.0.25",
-    "eslint": "^8.6.0",
-    "prettier": "^3.0.2",
-    "typescript": "^5.1.6"
-  },
-  "prettier": {
-    "semi": false,
-    "printWidth": 100,
-    "bracketSpacing": false,
-    "singleQuote": true
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-jsdoc": "^46.8.2",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "vite": "^4.4.5"
   }
 }
