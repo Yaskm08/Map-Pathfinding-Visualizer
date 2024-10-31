@@ -28,7 +28,7 @@ const Interface = forwardRef(({ canStart, started, animationEnded, playbackOn, t
             setSnack({ open: true, message, type });
         },
     }));
-      
+
     function closeSnack() {
         setSnack({...snack, open: false});
     }
@@ -42,7 +42,7 @@ const Interface = forwardRef(({ canStart, started, animationEnded, playbackOn, t
             setShowTutorial(false);
             return;
         }
-        
+
         setActiveStep(Math.max(activeStep + direction, 0));
     }
 
@@ -55,7 +55,7 @@ const Interface = forwardRef(({ canStart, started, animationEnded, playbackOn, t
         }
         toggleAnimation();
     }
-    
+
     function closeMenu() {
         setMenuAnchor(null);
     }
@@ -113,7 +113,7 @@ const Interface = forwardRef(({ canStart, started, animationEnded, playbackOn, t
                     <Slider disabled={!animationEnded}  value={animationEnded ? time : maxTime} min={animationEnded ? 0 : -1} max={maxTime} onChange={(e) => {timeChanged(Number(e.target.value));}} className="slider" aria-labelledby="playback-slider" />
                 </div>
                 <IconButton disabled={!canStart} onClick={handlePlay} style={{ backgroundColor: "#46B780", width: 60, height: 60 }} size="large">
-                    {(!started || animationEnded && !playbackOn) 
+                    {(!started || animationEnded && !playbackOn)
                         ? <PlayArrow style={{ color: "#fff", width: 26, height: 26 }} fontSize="inherit" />
                         : <Pause style={{ color: "#fff", width: 26, height: 26 }} fontSize="inherit" />
                     }
@@ -148,24 +148,25 @@ const Interface = forwardRef(({ canStart, started, animationEnded, playbackOn, t
                 </Fade>
             </div>
 
-            <Snackbar 
-                anchorOrigin={{ vertical: "bottom", horizontal: "right" }} 
-                open={snack.open} 
-                autoHideDuration={4000} 
+
+            <Snackbar
+                anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+                open={snack.open}
+                autoHideDuration={4000}
                 onClose={closeSnack}>
-                <Alert 
-                    onClose={closeSnack} 
-                    severity={snack.type} 
+                <Alert
+                    onClose={closeSnack}
+                    severity={snack.type}
                     style={{ width: "100%", color: "#fff" }}
                 >
                     {snack.message}
                 </Alert>
             </Snackbar>
 
-            <Snackbar 
-                anchorOrigin={{ vertical: "top", horizontal: "center" }} 
-                open={helper} 
-                autoHideDuration={helperTime.current} 
+            <Snackbar
+                anchorOrigin={{ vertical: "top", horizontal: "center" }}
+                open={helper}
+                autoHideDuration={helperTime.current}
                 onClose={closeHelper}
             >
                 <div className="cinematic-alert">
@@ -307,7 +308,7 @@ const Interface = forwardRef(({ canStart, started, animationEnded, playbackOn, t
                                 horizontal: "right",
                             }}
                         >
-                            {LOCATIONS.map(location => 
+                            {LOCATIONS.map(location =>
                                 <MenuItem key={location.name} onClick={() => {
                                     closeMenu();
                                     changeLocation(location);
@@ -320,7 +321,7 @@ const Interface = forwardRef(({ canStart, started, animationEnded, playbackOn, t
                         <Typography id="area-slider" >
                             Area radius: {settings.radius}km ({(settings.radius / 1.609).toFixed(1)}mi)
                         </Typography>
-                        <Slider disabled={started && !animationEnded} min={2} max={20} step={1} value={settings.radius} onChangeCommited={() => { changeRadius(settings.radius); }} onChange={e => { setSettings({...settings, radius: Number(e.target.value)}); }} className="slider" aria-labelledby="area-slider" style={{ marginBottom: 1 }} 
+                        <Slider disabled={started && !animationEnded} min={2} max={20} step={1} value={settings.radius} onChangeCommited={() => { changeRadius(settings.radius); }} onChange={e => { setSettings({...settings, radius: Number(e.target.value)}); }} className="slider" aria-labelledby="area-slider" style={{ marginBottom: 1 }}
                             marks={[
                                 {
                                     value: 2,
@@ -330,7 +331,7 @@ const Interface = forwardRef(({ canStart, started, animationEnded, playbackOn, t
                                     value: 20,
                                     label: "20km"
                                 }
-                            ]} 
+                            ]}
                         />
                     </div>
 
@@ -345,7 +346,7 @@ const Interface = forwardRef(({ canStart, started, animationEnded, playbackOn, t
                         <Typography style={{ color: "#A8AFB3", textTransform: "uppercase", fontSize: 14 }} >
                             Styles
                         </Typography>
-                        
+
                         <div>
                             <Typography id="start-fill-label" >
                                 Start node fill color
