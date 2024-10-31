@@ -3,13 +3,7 @@
 /workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
-/node_modules/
 
-# Created by https://www.toptal.com/developers/gitignore/api/nextjs
-# Edit at https://www.toptal.com/developers/gitignore?templates=nextjs
-
-### NextJS ###
-# dependencies
 /node_modules
 /.pnp
 .pnp.js
